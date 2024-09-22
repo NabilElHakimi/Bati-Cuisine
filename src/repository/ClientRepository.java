@@ -25,6 +25,7 @@ public class ClientRepository implements Crud<Client> {
                 pr.setString(2, client.getAddress());
                 pr.setString(3, client.getPhone());
                 pr.setBoolean(4, client.getIs_professional());
+
                 pr.executeUpdate();
 
                 ResultSet rs = pr.getGeneratedKeys();
