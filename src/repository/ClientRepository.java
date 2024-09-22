@@ -16,7 +16,7 @@ public class ClientRepository implements Crud<Client> {
         this.connection = DatabaseConnection.getInstance().getConnection();
     }
 
-    public int save(Optional<Client> clientOpt) {
+    /*public int save(Optional<Client> clientOpt) {
         if (clientOpt.isPresent()) {
             Client client = clientOpt.get();
             String query = "INSERT INTO clients (name, address, phone, is_professional) VALUES (?, ?, ?, ?)";
@@ -38,7 +38,7 @@ public class ClientRepository implements Crud<Client> {
             throw new IllegalArgumentException("Client object is not present");
         }
         return 0;
-    }
+    }*/
 
 
     public Client getClient(String name) {
