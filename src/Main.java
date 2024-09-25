@@ -13,6 +13,7 @@ public class Main {
                 QuoteView quoteView = new QuoteView();
 
                 quoteView.checkDatesOfProjects();
+
                 while (true) {
                         System.out.println("\n" +
                                 "============================================================\n" +
@@ -36,6 +37,8 @@ public class Main {
                                         projectView.saveProjectMenu();
                                         break;
                                 case 2:
+                                        quoteView.checkDatesOfProjects();
+
                                         projectView.displayProjects();
                                                 int projectChoice = CheckInput.readInt("Choisez le project pour afficher les detail : ");
                                                 String askForCalc = CheckInput.readString("Voulez-vous calculer le coût d'un projet ? (y/n) ");

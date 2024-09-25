@@ -25,7 +25,6 @@ public class ClientRepository implements Crud<Client> {
                 pr.setString(2, client.getAddress());
                 pr.setString(3, client.getPhone());
                 pr.setBoolean(4, client.getIs_professional());
-
                 pr.executeUpdate();
 
                 ResultSet rs = pr.getGeneratedKeys();
@@ -33,6 +32,7 @@ public class ClientRepository implements Crud<Client> {
                     return rs.getInt(1);  // Return the generated key (ID)
                 }
             } catch (SQLException e) {
+
                 throw new RuntimeException("Error inserting client", e);
             }
         } else {
